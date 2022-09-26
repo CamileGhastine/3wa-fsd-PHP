@@ -13,11 +13,8 @@ echo "<hr>";
 
 // Affichage
 echo '<h4 style="text-decoration: underline;">Affichage :</h4>';
-
-//exercice 1
-// Afficher hello word ! sur une ligne et bonjour le monde sur la ligne du dessous.
-
-// CODER ICI ....
+echo "hello word !";
+echo "<br>";
 
 // Une variable permet de stocker des valeurs de différents types 
 // variable = nom + valeur + type
@@ -27,13 +24,7 @@ $var1 = 2; // type integer
 $var2 = "Hello !"; // type string
 $var3 = true; // type boolean
 
-// AFficher ces 3 variables les unes en dessous des autres.
-// CODER ICI ....
-
-// Y-a-t-il quelque chose qui vous parait étrange ,
-// Réponse : ICI ...
-
-
+echo $var1, "<br>", $var2, "<br>", $var3, "<br>";
 
 echo '<h4 style="text-decoration: underline;">Var_dump :</h4>';
 // var_dump() permet d'afficher le type et la valeur d'une variable
@@ -43,43 +34,35 @@ var_dump($var2);
 echo "<br>";
 var_dump($var3);
 echo "<hr>";
-// Observez les résultats obtenus par les lignes de code ci-dessus.
-
-// die(); 
-// décommenter la ligne ci-desssu et palcez la en ligne 2. Que constatez-vous ?
-// Réponse : ICI ...
+// die();
 
 echo '<h4 style="text-decoration: underline;">Opérateur arithmétique :</h4>';
 //Opérateur arithmétique
 $number1 = 20;
 $number2 = 10;
-// Decommenter les lignes ci-dessous et coder
 
-// $addition =  COMPLETER ICI ...;
-// echo $addition;
+$addition = $number1 + $number2;
+echo $addition;
 echo "<br>";
-// $soustraction = COMPLETER ICI ...;
-// echo $soustraction;
+$soustraction = $number1 - $number2;
+echo $soustraction;
 echo "<br>";
-// $multiplication = COMPLETER ICI ...;
-// echo $multiplication;
+$multiplication = $number1 * $number2;
+echo $multiplication;
 echo "<br>";
-// $division = COMPLETER ICI ...;
-// echo $division;
+$division = $number1 / $number2;
+echo $division;
 echo "<br>";
 
 // Quel sera le résultat affiché ?
 $number1 = 20;
 $number2 = 10;
-$number1 += $number2; // Réponse : ICI ...
-$number1 -= $number2; // // Réponse : ICI ...
-$number1 *= $number2; // // Réponse : ICI ...
-$number1 /= 2; // // Réponse : ICI ...
-// décommenter pour vérifier le résultat final
-// echo $number1;
-
-
-
+$number1 += $number2; // $number1 = $number1 + $number2 = 20 +10 = 30
+$number1 -= $number2; // $number1 = 30 - 10 = 20
+$number1 *= $number2; // $number1 = 20 * 10 = 200
+$number1 /= 2; // $number1 = 200 / 2 = 100
+echo $number1; // 100
+echo "<hr>";
 
 echo '<h4 style="text-decoration: underline;">Opérateur de chaines :</h4>';
 
@@ -87,9 +70,15 @@ echo '<h4 style="text-decoration: underline;">Opérateur de chaines :</h4>';
 $nom = "Ghastine";
 $prenom = "Camile";
 
-
+// Afficher : Je suis Camile (2 méthodes).
+echo "je suis " . $prenom . "<br>";
+echo "je suis $prenom <br>";
 // Afficher : Je suis Camile Ghastine (2 méthodes)
-// CODER ICI ...
+echo "je suis " . $prenom . " " . $nom . "<br>";
+echo "je suis $prenom $nom <br>";
+// Afficher : Il a dit "Hello !" (2 méthodes)
+echo 'il a dit "hello !"<br>';
+echo "il a dit \"hello !\"<br>";
 
 echo $nom . "<br>";
 $nom .= $prenom;
@@ -130,11 +119,11 @@ while ($i <= 10) {
 echo "<hr>";
 
 // Exercice : afficher la table de 9 (opération + résultat)
-// 1 x 9 = 9
-// 2 x 9 = 18
-// ...
-
-// CODER ICI ...
+$a = 0;
+while ($a <= 10) {
+    echo "9 x " . $a . " = " . $a * 9 . "<br>";
+    $a++;
+}
 
 echo "<hr>";
 
@@ -148,10 +137,16 @@ for ($i = 0; $i <= 10; $i++) {
 // Exercice : compter à rebours
 echo "Compter à rebours<br>";
 
-// CODER ICI ...
+for ($i = 10; $i >= 0; $i--) {
+    echo $i . "<br>";
+}
+
+echo "<hr>";
+echo 'suite ...<br>';
+?>
 
 
-/*
+<!-- 
 Structure d'un URL (Uniform Ressource Locator)
 
 https://www.monSite.com/blog/article1?parametre=valeur&autreParametre=valeur#ancre
@@ -174,11 +169,13 @@ On pourra récupérer ces parmètres dans les variables :
 $_GET['param1'] = "true";
 $_GET['param2'] = "Paris";
 $_GET['param3'] = "50";
-*/
-?>
+-->
 
 <a href="?prenom=camile">mon lien</a>
 <br>
-<!-- Ecrire un bout de code qui affiche le prénom passé dans l'url dans le navigateur. -->
 
-<!-- CODER ICI ... -->
+<?php
+if (isset($_GET['prenon'])) {
+    echo $_GET['prenon'];       //$_GET['prenom'] = "camile"
+}
+?>

@@ -1,0 +1,22 @@
+Histoire
+
+Le PHP/FI (Personal Home Page / Form Interpreter) est créé en 1994 par Lerdorf Rasmus qui publie son code en open source en 1995.
+Quelques années plus tard, le PHP est réécrit et renommé PHP (PHP Hypertext Preprocessor : sigle recursif).
+
+PHP un langage utilisé coté serveur pour générer des pages web dynamique, c’est-à-dire du code HTML, CSS et des données (images par exemple).
+->	Schéma client-serveur-bdd
+Mais peut aussi être utilisé de façon locale comme n'importe quel langage (en ligne de commande) sans serveur HTTP, ni navigateur.
+
+PHP a mauvaise réputation parce que :
+-	Son logo est un éléphant (ce qui n'est pas signe de rapidité et de finesse)
+-	Techniquement inconsistant : peu typé, peu performent, et trop souple => nombreuses failles possibles
+ 	
+ 	-> Arguments de moins en moins justifiés avec les dernières versions majeurs de PHP : aujourd'hui php est rapide, peut-être typé si on le souhaite et les failles de sécurité peuvent être gérées avec de bonnes connaissances.
+	Aujourd'hui php a largement gommé les reproches qu'on lui faisait.
+
+Avantages de PHP :
+-	80 % des sites web sont en php (facebook, wordpress, Wikipedia, …)
+-	Libre, gratuit et simple (souple, peu typé, …) => facile à apprendre (attention aux failles de sécurité)
+-	Grande compatibilité (système d'exploitation, server, bdd)
+-	Langage idéal pour le web (mais pas adapté pour l'intelligence artificiel par exemple)
+
