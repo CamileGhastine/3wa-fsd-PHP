@@ -1,8 +1,9 @@
 # 3wa-fsd-PHP
 
-Présentatio de l'examen
+Présentation de l'examen
 Github
 Les bases de PHP
 Algos
 Les bases de la POO
 MVC
+Blog from scratch (POO-MVC)
